@@ -46,6 +46,12 @@ header {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+}
+
 header.hide {
   opacity: 0;
 }
@@ -101,18 +107,27 @@ header.hide {
     margin-top: 50px;
   }
   .home-content {
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
   }
-  .home-image img {
-    margin-right: 100px;
-    max-width: 350px;
+}
+
+@media (max-width: 768px) {
+  .home-image {
+    display: none;
   }
 }
 
 @media (max-width: 425px) {
   .home-image img {
-    margin-right: 150px;
-    max-width: 350px;
+    max-width: 300px;
+    margin-right: 230px;
+  }
+}
+@media (max-width: 375px) {
+  .home-image img {
+    max-width: 250px;
   }
 }
 
@@ -185,7 +200,6 @@ header.hide {
 .content {
   border: 5px solid #181818;
   width: 800px;
-  height: 850px;
 }
 
 .content p {
@@ -199,12 +213,23 @@ header.hide {
 @media (max-width: 810px) {
   .content {
     width: 500px;
-    height: 800px;
     margin-left: 10px;
     margin-top: 100px;
   }
   .content p {
     font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar a {
+    display: none;
+  }
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
   }
 }
 
@@ -216,18 +241,8 @@ header.hide {
 }
 
 @media (max-width: 425px) {
-  nav a {
-    display: none;
-  }
-  .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-  }
   .content {
     width: 350px;
-    height: 780px;
     margin-top: 100px;
   }
   .content h1 {
@@ -429,9 +444,10 @@ header.hide {
   }
 }
 
-@media (max-width: 753px) {
+@media (max-width: 768px) {
   .tech-title {
     margin-bottom: 100px;
+    margin-top: 0;
     padding-top: 100px;
     font-size: 2.5rem;
     padding-left: 50px;
@@ -468,11 +484,8 @@ header.hide {
   }
   .tech-stack-content {
     float: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
   .tech-stack-content .tech-logo {
     font-size: 1.3rem;
@@ -651,6 +664,20 @@ header.hide {
   font-size: 5rem;
   color: #181818;
   letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .wip-header {
+    font-size: 4rem;
+  }
+  .wip {
+    min-height: 20vh;
+  }
+}
+@media (max-width: 425px) {
+  .wip-header {
+    font-size: 2.5rem;
+  }
 }
 
 .loading {
