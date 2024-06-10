@@ -231,6 +231,11 @@
   min-width: 150px;
   color: #060505;
 }
+@media (max-width: 425px) {
+  .carousel__slide figcaption {
+    display: none;
+  }
+}
 .carousel__slide .credit {
   margin-top: 1rem;
   color: rgba(0, 0, 0, 0.5);
